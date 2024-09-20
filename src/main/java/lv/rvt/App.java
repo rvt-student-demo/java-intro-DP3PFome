@@ -10,13 +10,36 @@ public class App
         Scanner scanner = new Scanner(System.in);
 
 
+        System.out.println("Give points [0-100]:");
+        int points = Integer.valueOf(scanner.nextLine());
+        if (points<0) {
+                System.out.println("Grade: impossible!");
+                
+        } else if (points > 100 ){
+                System.out.println("Grade: impossible!");
+            } else if (points<49) {
+                System.out.println("Grade: failed");
+            } else if (/*50<*/ points<= 59) {
+                System.out.println("Grade: 1");
+            } else if (/*60 <*/ points <= 69) {
+                System.out.println("Grade: 2");
+            } else if (/*70 <*/ points <= 79 ){
+                System.out.println("Grade: 3");
+            } else if (/*80 < */points <= 89 ){
+                System.out.println("Grade: 4");
+            } else if (/*90 < */points <= 100 ){
+                System.out.println("Grade: 5");
+            }
+
+/*
+
         System.out.println("Give speed: ");
         int speed = Integer.valueOf(scanner.nextLine());
         if (speed>120) {
                 System.out.println("Speeding ticket!");
                 
         }
-
+*/
 
         //Scanner scanner = new Scanner(System.in);
      //   System.out.println("Give the first number: ");
