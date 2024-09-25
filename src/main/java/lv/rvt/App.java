@@ -1,6 +1,6 @@
 package lv.rvt;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class App 
 {
@@ -8,6 +8,37 @@ public class App
 
     {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Value of the gift?");
+        double naud = Integer.valueOf(scanner.nextLine());
+        if (naud<5000){
+            System.out.println("No tax!");
+        } else if (naud >= 5000 && naud <= 25000){
+            if (naud*0.08/100>100){
+                System.out.println("Tax: "+ naud*0.08/100);
+            } else {
+                System.out.println("Tax: 100.0");
+            }
+        } else if (naud>=25000 && naud<=55000) {
+            System.out.println("Tax: "+ naud*0.1/100);
+            
+        } else if (naud>=55000 && naud<=200000) {
+            System.out.println("Tax: "+ naud*0.12/100);
+            
+        } else if (naud>=200000 && naud<=1000000) {
+            System.out.println("Tax: "+ naud*0.15/100);
+            
+        } else if (naud>=1000000 ) {
+            System.out.println("Tax: "+ naud*0.17/100);
+            
+        }
+
+
+
+
+
+    }
+}
+/*
 
 
         System.out.println("Give points [0-100]:");
@@ -19,27 +50,28 @@ public class App
                 System.out.println("Grade: impossible!");
             } else if (points<49) {
                 System.out.println("Grade: failed");
-            } else if (/*50<*/ points<= 59) {
+            } else if ( points<= 59) {
                 System.out.println("Grade: 1");
-            } else if (/*60 <*/ points <= 69) {
+            } else if ( points <= 69) {
                 System.out.println("Grade: 2");
-            } else if (/*70 <*/ points <= 79 ){
+            } else if ( points <= 79 ){
                 System.out.println("Grade: 3");
-            } else if (/*80 < */points <= 89 ){
+            } else if (points <= 89 ){
                 System.out.println("Grade: 4");
-            } else if (/*90 < */points <= 100 ){
+            } else if (points <= 100 ){
                 System.out.println("Grade: 5");
             }
 
-/*
 
+
+---------------------------------------
         System.out.println("Give speed: ");
         int speed = Integer.valueOf(scanner.nextLine());
         if (speed>120) {
                 System.out.println("Speeding ticket!");
                 
         }
-*/
+
 
         //Scanner scanner = new Scanner(System.in);
      //   System.out.println("Give the first number: ");
@@ -79,3 +111,5 @@ public class App
     }
 
 }
+
+*/
