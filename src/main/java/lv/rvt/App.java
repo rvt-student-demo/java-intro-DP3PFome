@@ -1,6 +1,6 @@
 package lv.rvt;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class App 
 {
@@ -8,6 +8,33 @@ public class App
 
     {
         Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Give a number:");
+            int sk = Integer.valueOf(scanner.nextLine());
+            
+    
+            if (sk == 0) {
+                break;
+            }
+    
+            if (sk < 0) {
+                System.out.println("Unsuitable number");
+                continue;
+            } else {
+                System.out.println(sk*sk);
+            }
+    
+            
+        }
+        
+
+
+
+
+    }
+}
+/*
+Scanner scanner = new Scanner(System.in);
         System.out.println("Value of the gift?");
         double naud = Integer.valueOf(scanner.nextLine());
         if (naud<5000){
@@ -33,15 +60,10 @@ public class App
         }
 
 
+        
 
 
-
-    }
-}
-/*
-
-
-        System.out.println("Give points [0-100]:");
+System.out.println("Give points [0-100]:");
         int points = Integer.valueOf(scanner.nextLine());
         if (points<0) {
                 System.out.println("Grade: impossible!");
