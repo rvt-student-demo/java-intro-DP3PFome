@@ -7,6 +7,8 @@ public class App
     public static void main( String[] args )
 
     {
+        int sm =0 ;
+        int s =1 ;
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Give a number:");
@@ -16,16 +18,14 @@ public class App
             if (sk == 0) {
                 break;
             }
-    
-            if (sk < 0) {
-                System.out.println("Unsuitable number");
-                continue;
-            } else {
-                System.out.println(sk*sk);
-            }
+            sm=sm+sk ;
+            s=s+1 ;
+            
     
             
         }
+        System.out.println("Number of numbers:" + s);
+        System.out.println("Sum of the numbers:"+ sm);
         
 
 
