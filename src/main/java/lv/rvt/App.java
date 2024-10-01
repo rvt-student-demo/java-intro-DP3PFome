@@ -7,16 +7,20 @@ public class App
     public static void main( String[] args )
 
     {
+        System.out.print("Last number? ");
 
         Scanner scanner = new Scanner(System.in);
         int sk = Integer.valueOf(scanner.nextLine());
         int i = 0;
+        int sum=0;
 
     while (i <= sk) {
-        System.out.println(i);
+        
+        sum=sum+i;
         
     i++;
 }
+System.out.println("The sum is "+sum);
 
 
     }
