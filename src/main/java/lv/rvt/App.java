@@ -7,6 +7,22 @@ public class App
     public static void main( String[] args )
 
     {
+
+        Scanner scanner = new Scanner(System.in);
+        int sk = Integer.valueOf(scanner.nextLine());
+        int i = 0;
+
+    while (i <= sk) {
+        System.out.println(i);
+        
+    i++;
+}
+
+
+    }
+}
+
+/*
         int sm =0 ;
         int s =1 ;
         Scanner scanner = new Scanner(System.in);
@@ -32,7 +48,8 @@ public class App
 
 
     }
-}
+        */
+
 /*
 Scanner scanner = new Scanner(System.in);
         System.out.println("Value of the gift?");
