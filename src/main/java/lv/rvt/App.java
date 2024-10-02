@@ -1,27 +1,42 @@
 package lv.rvt;
-
 import java.util.Scanner;
-
 public class App 
 {
     public static void main( String[] args )
+    
 
     {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Last number? ");
 
-        Scanner scanner = new Scanner(System.in);
-        int sk = Integer.valueOf(scanner.nextLine());
-        int i = 0;
+        
+        
+        int i=0;
         int sum=0;
+        int odd=0;
+        System.out.println("Give numbers:");
 
-    while (i <= sk) {
+    while (true) {
         
-        sum=sum+i;
+        int sk = Integer.valueOf(scanner.nextLine());
         
-    i++;
-}
-System.out.println("The sum is "+sum);
-
+        
+        if (sk==-1) {
+            System.out.println("Thx! Bye!");
+            break;
+        }
+        if (sk%2!=0) {
+            odd++;
+        }
+        i++;
+        sum=sum+sk;
+        continue;
+    }
+    double vid = (double)sum / i;
+    System.out.println("Sum: "+ sum);
+    System.out.println("Numbers: " + i);
+    System.out.println("Average:" + vid);
+    System.out.println("Odd: " + odd);
 
     }
 }
