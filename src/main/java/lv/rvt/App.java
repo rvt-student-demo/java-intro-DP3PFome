@@ -3,10 +3,60 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args )
-    
-
     {
+        divisibleByThreeInRange(2, 10);
+
+
+
+    }
+
+    public static void divisibleByThreeInRange(int beginning, int end){
+        int i=beginning;
+        while (i <= end) {
+            if (i%3==0) {
+                System.out.println(i);
+            }
+            i++;
+            
+        }
+        
+    }
+
+
+}
+
+/*
+
+System.out.println("Give numbers:");
         Scanner scanner = new Scanner(System.in);
+        int sk = Integer.valueOf(scanner.nextLine());
+        int i=0;
+        while (i<sk) {
+            printText();
+            i++;
+        }
+
+
+      
+        
+       
+    }
+    public static void printText() {
+        System.out.println("In a hole in the ground there lived a method");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  Scanner scanner = new Scanner(System.in);
         System.out.print("Last number? ");
 
         
@@ -38,8 +88,9 @@ public class App
     System.out.println("Average:" + vid);
     System.out.println("Odd: " + odd);
 
-    }
-}
+ */
+
+
 
 /*
         int sm =0 ;
