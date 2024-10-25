@@ -7,20 +7,17 @@ public class App
 {
     public static void main( String[] args )
     {
-        
         Scanner scanner = new Scanner(System.in);
         
-        int x=2;
         ArrayList<Integer> numbers= new ArrayList();
 
-
         System.out.println("Input numbers: ");
-        while (x!=-1) {
+        while (true) {
             Integer i = Integer.valueOf(scanner.nextLine());
-            x=i;
+            if (i == -1) {
+                break;
+            }
             numbers.add(i);
-            
-            
         }
 
         Integer start;
@@ -45,9 +42,7 @@ public class App
             else if (end <= 0 || end > numbers.size() - 1) {
                 System.out.println("Invalid end index");
             }
-            else
-            { break; }
-            
+            else { break; }
         }
         
 
@@ -56,9 +51,6 @@ public class App
             System.out.println(numbers.get(i));
 
         }
-
-        
-
 
     }
 
