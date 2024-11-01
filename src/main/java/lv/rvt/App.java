@@ -7,51 +7,34 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-        
-        ArrayList<Integer> numbers= new ArrayList();
-
-        System.out.println("Input numbers: ");
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        int length =0;
+        String word;
+        String name = "";
         while (true) {
-            Integer i = Integer.valueOf(scanner.nextLine());
-            if (i == -1) {
+            String input = reader.nextLine();
+            if (input.equals("")) {
                 break;
             }
-            numbers.add(i);
-        }
-
-        Integer start;
-        Integer end;
-
-        while (true) {
-            System.out.print("From where? ");
-            start = Integer.valueOf(scanner.nextLine());
+            word=input;
         
-            
-            System.out.print("To where? ");
-            end = Integer.valueOf(scanner.nextLine());
-    
-            if (start < 0 || start > numbers.size() - 1) {
-                System.out.println("Invalid start index");
-                
-            } 
-            else if (start > end) {
-                System.out.println("Start index can not be greater then end index");
-               
+            String[] parts = input.split(",");
+            sum = sum + Integer.valueOf(parts[1]);
+            count = count + 1;
+            if (length <word.length()) {
+                length = word.length();
+                name = word;
             }
-            else if (end <= 0 || end > numbers.size() - 1) {
-                System.out.println("Invalid end index");
-            }
-            else { break; }
         }
         
-
-        // Tas mums izpildas kad visi indeksi ir pareizi
-        for (int i = start;i < end ;i++ ){
-            System.out.println(numbers.get(i));
-
+        if (count > 0) {
+            System.out.println("Longest name: " + name);
+            System.out.println("Age average: " + (1.0 * sum / count));
+        } else {
+            System.out.println("No input.");
         }
-
     }
 
     
