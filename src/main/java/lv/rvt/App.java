@@ -2,39 +2,41 @@
 package lv.rvt;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class App 
 
-{
+public class App {
     public static void main( String[] args )
     {
-        Scanner reader = new Scanner(System.in);
-        int sum = 0;
-        int count = 0;
-        int length =0;
-        String word;
-        String name = "";
-        while (true) {
-            String input = reader.nextLine();
-            if (input.equals("")) {
-                break;
+        int x=0;
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Book> books2 = new ArrayList<>();
+        while(true){
+            System.out.print("Title: ");
+            String Title = String.valueOf(scanner.nextLine());
+            if (Title=="") {
+               break;
             }
-            word=input;
-        
-            String[] parts = input.split(",");
-            sum = sum + Integer.valueOf(parts[1]);
-            count = count + 1;
-            if (length <word.length()) {
-                length = word.length();
-                name = word;
+            System.out.print("Pages: ");
+            int Page = Integer.valueOf(scanner.nextLine());
+            System.out.print("Publication year: ");
+            int Year = Integer.valueOf(scanner.nextLine());
+
+
+            
+
+
+            Book book1 = new Book(Title, Page, Year);
+            books2.add(book1);
+            x++;
+
+        }
+        System.out.println("What information will be printed?");
+        String information = String.valueOf(scanner.nextLine());
+        if (information=="everything"){
+            for (int i=0;i<x;i++){
+                System.out.println(books2.get(i));
             }
         }
         
-        if (count > 0) {
-            System.out.println("Longest name: " + name);
-            System.out.println("Age average: " + (1.0 * sum / count));
-        } else {
-            System.out.println("No input.");
-        }
     }
 
     
